@@ -1,0 +1,4 @@
+name: Scandium21sBlockHunt
+version: 1.0.0
+main: io.github.MetalTurtle18.ScanBlockHunt
+api-version: 1.16
