@@ -14,4 +14,5 @@ public class ScanBlockHunt extends JavaPlugin {
     public void onDisable() {
         getServer().getConsoleSender().sendMessage(ChatColor.DARK_PURPLE + "[Scandium21's Block Hunt]: " + ChatColor.RED + "Plugin unloaded!");
     }
+
 }
