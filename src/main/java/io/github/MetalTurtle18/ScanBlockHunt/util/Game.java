@@ -1,10 +1,9 @@
 package io.github.MetalTurtle18.ScanBlockHunt.util;
 
-import io.github.MetalTurtle18.ScanBlockHunt.ScanBlockHunt;
-import org.bukkit.entity.Player;
+import java.util.ArrayList;
 
 public class Game {
-    public Player[] gamePlayers;
+    public ArrayList<GamePlayer> gamePlayers;
 
     public Game() {
 
