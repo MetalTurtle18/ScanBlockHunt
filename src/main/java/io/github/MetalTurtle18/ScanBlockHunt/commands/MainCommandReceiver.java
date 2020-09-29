@@ -16,7 +16,7 @@ public class MainCommandReceiver implements CommandExecutor {
             StartCommand.start(strings);
         }
         if (strings[0].toLowerCase().equals("join")) {
-            JoinCommand.join(strings);
+            JoinCommand.join(player, strings);
         }
 
         return true;

@@ -8,4 +8,9 @@ public class Game {
     public Game() {
 
     }
+
+    public void addPlayer(String UUID) {
+        gamePlayers.add(new GamePlayer(UUID));
+    }
+
 }
