@@ -5,7 +5,5 @@ import org.bukkit.entity.Player;
 public interface BlockHuntCommand {
     String getCommandName();
 
-    String getCommandUsage();
-
-    boolean runCommand(Player player, String[] args);
+    void runCommand(Player player, String[] args);
 }

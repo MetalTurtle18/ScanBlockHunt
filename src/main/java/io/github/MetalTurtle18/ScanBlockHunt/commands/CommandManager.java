@@ -30,12 +30,7 @@ public class CommandManager implements CommandExecutor {
         Player player = (Player) commandSender;
         for (BlockHuntCommand command : commands) {
             if (command.getCommandName().equalsIgnoreCase(args[0])) {
-                if (!command.runCommand(player, args)) {
-                    Messenger.sendMessage(player, "Command usage: " + command.getCommandUsage(), MessageSeverity.INCORRECT_COMMAND_USAGE);
-                    return false;
-                } else {
-                    return true;
-                }
+                command.runCommand(player, args);
             }
         }
         return false;
