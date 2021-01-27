@@ -1,8 +1,11 @@
 package io.github.MetalTurtle18.ScanBlockHunt.util;
 
+import org.bukkit.entity.Player;
+
 public class GamePlayer {
-    private String UUID;
-    public GamePlayer(String UUID) {
-        this.UUID = UUID;
+    private final Player player;
+
+    public GamePlayer(Player player) {
+        this.player = player;
     }
 }
