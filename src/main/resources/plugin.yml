@@ -1,4 +1,9 @@
 name: Scandium21sBlockHunt
-version: 1.0.0
+version: 0.0.1
 main: io.github.MetalTurtle18.ScanBlockHunt
 api-version: 1.16
+commands:
+  blockhunt:
+    description: Use this command to access all subcommands to control a game of blockhunt
+    usage: /blockhunt <create>
+    aliases: sbh

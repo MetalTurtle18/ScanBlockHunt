@@ -15,7 +15,7 @@ public class CommandManager implements CommandExecutor {
     private final ArrayList<BlockHuntCommand> commands = new ArrayList<>();
 
     public CommandManager() {
-
+        commands.add(new NewGameCommand());
     }
 
     @Override
