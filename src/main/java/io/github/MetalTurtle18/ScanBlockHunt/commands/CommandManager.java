@@ -16,6 +16,7 @@ public class CommandManager implements CommandExecutor {
 
     public CommandManager() {
         commands.add(new NewGameCommand());
+        commands.add(new JoinGameCommand());
     }
 
     @Override
