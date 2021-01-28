@@ -10,11 +10,13 @@ public class Game {
     @Getter private final Player gameHost;
     @Getter private final HashMap<Player, GamePlayer> players = new HashMap<>();
     @Getter private Item currentItem;
+    public boolean roundGoing;
 
     public Game(Player host) {
         gameHost = host;
         addPlayer(host);
         currentItem = null;
+        roundGoing = false;
     }
 
     public void addPlayer(Player player) {
@@ -23,10 +25,11 @@ public class Game {
 
     public void setItem(Item item) { // Probably need to add more stuff here
         currentItem = item;
+        roundGoing = true;
     }
 
     public void itemFound(Player foundByPlayer) {
-        currentItem = null;
+        roundGoing = false;
         players.get(foundByPlayer).increaseScore();
     }
 }
