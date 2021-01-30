@@ -1,6 +1,6 @@
-package io.github.MetalTurtle18.ScanBlockHunt.util;
+package io.github.metalturtle18.scanblockhunt.util;
 
-import io.github.MetalTurtle18.ScanBlockHunt.util.enums.MessageSeverity;
+import io.github.metalturtle18.scanblockhunt.util.enums.MessageSeverity;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 

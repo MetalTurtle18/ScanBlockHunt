@@ -1,12 +1,10 @@
-package io.github.MetalTurtle18.ScanBlockHunt;
+package io.github.metalturtle18.scanblockhunt;
 
-import io.github.MetalTurtle18.ScanBlockHunt.commands.CommandManager;
-import io.github.MetalTurtle18.ScanBlockHunt.events.ItemPickupEvent;
-import io.github.MetalTurtle18.ScanBlockHunt.util.Game;
-import io.github.MetalTurtle18.ScanBlockHunt.util.Messenger;
-import io.github.MetalTurtle18.ScanBlockHunt.util.enums.MessageSeverity;
-import org.bukkit.ChatColor;
-import org.bukkit.plugin.Plugin;
+import io.github.metalturtle18.scanblockhunt.commands.CommandManager;
+import io.github.metalturtle18.scanblockhunt.events.ItemPickupEvent;
+import io.github.metalturtle18.scanblockhunt.util.Game;
+import io.github.metalturtle18.scanblockhunt.util.Messenger;
+import io.github.metalturtle18.scanblockhunt.util.enums.MessageSeverity;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 

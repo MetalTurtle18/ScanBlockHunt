@@ -1,10 +1,10 @@
-package io.github.MetalTurtle18.ScanBlockHunt.commands;
+package io.github.metalturtle18.scanblockhunt.commands;
 
-import io.github.MetalTurtle18.ScanBlockHunt.ScanBlockHunt;
-import io.github.MetalTurtle18.ScanBlockHunt.util.BlockHuntCommand;
-import io.github.MetalTurtle18.ScanBlockHunt.util.Game;
-import io.github.MetalTurtle18.ScanBlockHunt.util.Messenger;
-import io.github.MetalTurtle18.ScanBlockHunt.util.enums.MessageSeverity;
+import io.github.metalturtle18.scanblockhunt.ScanBlockHunt;
+import io.github.metalturtle18.scanblockhunt.util.BlockHuntCommand;
+import io.github.metalturtle18.scanblockhunt.util.Game;
+import io.github.metalturtle18.scanblockhunt.util.Messenger;
+import io.github.metalturtle18.scanblockhunt.util.enums.MessageSeverity;
 import org.bukkit.entity.Player;
 
 public class NewGameCommand implements BlockHuntCommand {

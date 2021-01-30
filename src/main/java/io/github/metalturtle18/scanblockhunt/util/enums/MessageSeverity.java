@@ -1,4 +1,4 @@
-package io.github.MetalTurtle18.ScanBlockHunt.util.enums;
+package io.github.metalturtle18.scanblockhunt.util.enums;
 
 import org.bukkit.ChatColor;
 

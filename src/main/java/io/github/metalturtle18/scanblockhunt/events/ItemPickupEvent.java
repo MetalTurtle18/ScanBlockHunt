@@ -1,7 +1,6 @@
-package io.github.MetalTurtle18.ScanBlockHunt.events;
+package io.github.metalturtle18.scanblockhunt.events;
 
-import com.sun.tools.jdeprscan.scan.Scan;
-import io.github.MetalTurtle18.ScanBlockHunt.ScanBlockHunt;
+import io.github.metalturtle18.scanblockhunt.ScanBlockHunt;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,8 +12,9 @@ public class ItemPickupEvent implements Listener {
     public void onItemPickup(EntityPickupItemEvent event) {
         if (!(event.getEntity() instanceof Player) || ScanBlockHunt.runningGame == null || ScanBlockHunt.runningGame.getCurrentItem() == null) return;
         Player player = (Player) event.getEntity();
-        if (event.getItem().equals(ScanBlockHunt.runningGame.getCurrentItem()) && ScanBlockHunt.runningGame.roundGoing) {
+        if (event.getItem().getItemStack().getType().equals(ScanBlockHunt.runningGame.getCurrentItem()) && ScanBlockHunt.runningGame.roundGoing) {
             ScanBlockHunt.runningGame.itemFound(player);
+            player.sendMessage("found the item"); // TODO: testing
         }
     }
 }

@@ -1,9 +1,9 @@
-package io.github.MetalTurtle18.ScanBlockHunt.commands;
+package io.github.metalturtle18.scanblockhunt.commands;
 
-import io.github.MetalTurtle18.ScanBlockHunt.ScanBlockHunt;
-import io.github.MetalTurtle18.ScanBlockHunt.util.BlockHuntCommand;
-import io.github.MetalTurtle18.ScanBlockHunt.util.Messenger;
-import io.github.MetalTurtle18.ScanBlockHunt.util.enums.MessageSeverity;
+import io.github.metalturtle18.scanblockhunt.ScanBlockHunt;
+import io.github.metalturtle18.scanblockhunt.util.BlockHuntCommand;
+import io.github.metalturtle18.scanblockhunt.util.Messenger;
+import io.github.metalturtle18.scanblockhunt.util.enums.MessageSeverity;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -29,7 +29,7 @@ public class JoinGameCommand implements BlockHuntCommand {
             Messenger.sendMessage(player, "There is no game running!", MessageSeverity.INCORRECT_COMMAND_USAGE);
             return;
         }
-        if (ScanBlockHunt.runningGame.getPlayers().contains(joiningPlayer)) {
+        if (ScanBlockHunt.runningGame.getPlayers().containsKey(joiningPlayer)) {
             Messenger.sendMessage(player, "The player " + joiningPlayer.getDisplayName() + " is already in the game!", MessageSeverity.INCORRECT_COMMAND_USAGE);
             return;
         }

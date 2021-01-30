@@ -1,7 +1,7 @@
-package io.github.MetalTurtle18.ScanBlockHunt.util;
+package io.github.metalturtle18.scanblockhunt.util;
 
 import lombok.Getter;
-import org.bukkit.entity.Item;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Game {
     @Getter private final Player gameHost;
     @Getter private final HashMap<Player, GamePlayer> players = new HashMap<>();
-    @Getter private Item currentItem;
+    @Getter private Material currentItem;
     public boolean roundGoing;
 
     public Game(Player host) {
@@ -23,7 +23,7 @@ public class Game {
         players.put(player, new GamePlayer());
     }
 
-    public void setItem(Item item) { // Probably need to add more stuff here
+    public void setItem(Material item) { // Probably need to add more stuff here
         currentItem = item;
         roundGoing = true;
     }

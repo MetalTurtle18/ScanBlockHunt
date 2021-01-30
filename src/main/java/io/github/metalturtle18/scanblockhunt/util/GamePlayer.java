@@ -1,4 +1,4 @@
-package io.github.MetalTurtle18.ScanBlockHunt.util;
+package io.github.metalturtle18.scanblockhunt.util;
 
 public class GamePlayer {
 
