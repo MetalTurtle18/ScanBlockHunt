@@ -17,16 +17,17 @@ public class CommandManager implements CommandExecutor {
     public CommandManager() {
         commands.add(new NewGameCommand());
         commands.add(new JoinGameCommand());
+        commands.add(new GameInfoCommand());
     }
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command c, String s, String[] args) {
         if (!(commandSender instanceof Player)) {
             Messenger.sendMessage("This command can be run only by players!", MessageSeverity.INCORRECT_COMMAND_USAGE);
-            return false;
+            return true;
         } else if (args.length <= 0) {
             Messenger.sendMessage("You need to specify a subcommand!", MessageSeverity.INCORRECT_COMMAND_USAGE);
-            return false;
+            return true;
         }
         Player player = (Player) commandSender;
         for (BlockHuntCommand command : commands) {
@@ -34,6 +35,6 @@ public class CommandManager implements CommandExecutor {
                 command.runCommand(player, args);
             }
         }
-        return false;
+        return true;
     }
 }

@@ -5,6 +5,7 @@ import io.github.metalturtle18.scanblockhunt.util.BlockHuntCommand;
 import io.github.metalturtle18.scanblockhunt.util.Game;
 import io.github.metalturtle18.scanblockhunt.util.Messenger;
 import io.github.metalturtle18.scanblockhunt.util.enums.MessageSeverity;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 public class NewGameCommand implements BlockHuntCommand {
@@ -17,8 +18,9 @@ public class NewGameCommand implements BlockHuntCommand {
     public void runCommand(Player player, String[] args) {
         if (ScanBlockHunt.runningGame != null) { // There is already a game running
             Messenger.sendMessage(player, "There is already a game running so you cannot start a new one!", MessageSeverity.INCORRECT_COMMAND_USAGE);
-            return;
+        } else {
+            ScanBlockHunt.runningGame = new Game(player);
+            Messenger.sendMessage(player, "Started a new game!", MessageSeverity.INFO);
         }
-        ScanBlockHunt.runningGame = new Game(player);
     }
 }

@@ -17,9 +17,14 @@ public class JoinGameCommand implements BlockHuntCommand {
     public void runCommand(Player player, String[] args) {
         Player joiningPlayer;
         if (args.length >= 2) {
-            joiningPlayer = Bukkit.getPlayer(args[1]);
-            if (joiningPlayer == null) {
-                Messenger.sendMessage(player, "The player " + args[1] + " does not exist or is not online!", MessageSeverity.INCORRECT_COMMAND_USAGE);
+            if (player.isOp()) {
+                joiningPlayer = Bukkit.getPlayer(args[1]);
+                if (joiningPlayer == null) {
+                    Messenger.sendMessage(player, "The player " + args[1] + " does not exist or is not online!", MessageSeverity.INCORRECT_COMMAND_USAGE);
+                    return;
+                }
+            } else {
+                Messenger.sendMessage(player, "You do not have permission to add other players to the game!", MessageSeverity.INCORRECT_COMMAND_USAGE);
                 return;
             }
         } else {
