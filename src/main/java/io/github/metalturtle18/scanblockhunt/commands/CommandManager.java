@@ -6,11 +6,13 @@ import io.github.metalturtle18.scanblockhunt.util.enums.MessageSeverity;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class CommandManager implements CommandExecutor {
+public class CommandManager implements CommandExecutor, TabCompleter {
 
     private final ArrayList<BlockHuntCommand> commands = new ArrayList<>();
 
@@ -36,5 +38,10 @@ public class CommandManager implements CommandExecutor {
             }
         }
         return true;
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
+        return null;
     }
 }

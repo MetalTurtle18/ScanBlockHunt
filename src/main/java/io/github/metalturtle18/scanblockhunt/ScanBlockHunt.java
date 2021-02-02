@@ -18,7 +18,10 @@ public class ScanBlockHunt extends JavaPlugin {
     public void onEnable() {
         runningGame = null;
         PluginManager pluginManager = getServer().getPluginManager();
-        Objects.requireNonNull(getCommand("blockhunt")).setExecutor(new CommandManager());
+        //noinspection ConstantConditions
+        getCommand("blockhunt").setExecutor(new CommandManager());
+        //noinspection ConstantConditions
+        getCommand("blockhunt").setTabCompleter(new CommandManager());
         pluginManager.registerEvents(new ItemPickupEvent(), this);
         Messenger.sendMessage("Plugin loaded successfully!", MessageSeverity.INFO);
     }
